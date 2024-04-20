@@ -14,7 +14,6 @@ namespace ConsoleApp1.Tests
         [InlineData(1,1,2)]
         [InlineData(2,3,5)]
         [InlineData(1,4,5)]
-        [InlineData(1,1,5)]
         public void SumTest(int n1, int n2, int sum)
         {
             // ACT 
