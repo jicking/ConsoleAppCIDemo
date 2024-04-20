@@ -14,16 +14,14 @@ namespace ConsoleApp1.Tests
         [InlineData(1,1,2)]
         [InlineData(2,3,5)]
         [InlineData(1,4,5)]
+        [InlineData(1,1,5)]
         public void SumTest(int n1, int n2, int sum)
         {
-            // ARRANGE
-            const int expectedSum = 2;
-
             // ACT 
-            var result = Calculator.Sum(1 , 1);
+            var result = Calculator.Sum(n1 , n2);
 
             // ASSERT
-            Xunit.Assert.Equal(expectedSum, result);
+            Xunit.Assert.Equal(sum, result);
         }
     }
 }
