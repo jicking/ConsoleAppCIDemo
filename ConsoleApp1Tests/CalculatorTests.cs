@@ -10,16 +10,20 @@ namespace ConsoleApp1.Tests
 {
     public class CalculatorTests
     {
-        [Fact()]
-        public void SumTest()
+        [Theory]
+        [InlineData(1,1,2)]
+        [InlineData(2,3,5)]
+        [InlineData(1,4,5)]
+        public void SumTest(int n1, int n2, int sum)
         {
-            Xunit.Assert.Fail("This test needs an implementation");
-        }
+            // ARRANGE
+            const int expectedSum = 2;
 
-        [Fact()]
-        public void MultiplyTest()
-        {
-            Xunit.Assert.Fail("This test needs an implementation");
+            // ACT 
+            var result = Calculator.Sum(1 , 1);
+
+            // ASSERT
+            Xunit.Assert.Equal(expectedSum, result);
         }
     }
 }
